@@ -1,0 +1,60 @@
+{
+	"schema": {
+		"type": "object",
+		"properties": {
+			"daysOfRest": {
+				"type": "array",
+				"items": {
+					"field": "checkbox",
+					"enum": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"required": true
+				}
+			},
+			"lights": {
+				"type": "array",
+				"items": {
+					"field": "enum",
+					"datasource": "namespaces",
+					"enum": "namespaces:devices_switchBinary:deviceId,namespaces:devices_switchMultilevel:deviceId",
+					"required": true
+				}
+			},
+			"motions": {
+				"type": "array",
+				"items": {
+					"field": "enum",
+					"datasource": "namespaces",
+					"enum": "namespaces:devices_sensorBinary:deviceId,namespaces:devices_switchControl:deviceId",
+					"required": true
+				}
+			},
+			"motionOffTimeout": {
+				"type": "number",
+				"required": true
+			},
+			"luminance": {
+				"field": "enum",
+				"datasource": "namespaces",
+				"enum": "namespaces:devices_sensorMultilevel:deviceId",
+				"required": false
+			},
+			"luminanceThreshold": {
+				"type": "number",
+				"required": true
+			},
+			"rescueOffTimeout": {
+				"type": "number",
+				"required": true
+			}
+		},
+		"required": false
+	}
+}

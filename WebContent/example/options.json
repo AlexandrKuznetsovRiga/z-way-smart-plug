@@ -1,0 +1,61 @@
+{
+	"options": {
+		"fields": {
+			"daysOfRest": {
+				"label": "__l_daysOfRest__",
+				"fields": {
+					"checkbox": {
+						"label": "",
+						"field": "optionLabels",
+						"optionLabels": [
+							"Monday",
+							"Tuesday",
+							"Wendsday",
+							"Thirsday",
+							"Friday",
+							"Saturday",
+							"Sunday"
+						]
+					}
+				}
+			},
+			"lights": {
+				"label": "__l_lights__",
+				"fields": {
+					"item": {
+						"label": "",
+						"datasource": "namespaces",
+						"field": "optionLabels",
+						"optionLabels": "namespaces:devices_switchBinary:deviceName,namespaces:devices_switchMultilevel:deviceName"
+					}
+				}
+			},
+			"motions": {
+				"label": "__l_motions__",
+				"fields": {
+					"item": {
+						"label": "",
+						"datasource": "namespaces",
+						"field": "optionLabels",
+						"optionLabels": "namespaces:devices_sensorBinary:deviceName,namespaces:devices_switchControl:deviceName"
+					}
+				}
+			},
+			"motionOffTimeout": {
+				"label": "__l_motionOffTimeout__"
+			},
+			"luminance": {
+				"label": "__l_luminance__",
+				"datasource": "namespaces",
+				"field": "optionLabels",
+				"optionLabels": "namespaces:devices_sensorMultilevel:deviceName"
+			},
+			"luminanceThreshold": {
+				"label": "__l_luminanceThreshold__"
+			},
+			"rescueOffTimeout": {
+				"label": "__l_rescueOffTimeout__"
+			}
+		}
+	}
+}

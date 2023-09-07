@@ -1,0 +1,27 @@
+{
+	"creationTime": 0,
+	"creatorId": 25,
+	"customIcons": {
+		"default": ""
+	},
+	"deviceType": "toggleButton",
+	"h": -560741381,
+	"hasHistory": false,
+	"id": "Scenes_27",
+	"location": 0,
+	"metrics": {
+		"level": "on",
+		"icon": "scene",
+		"title": "Removed"
+	},
+	"order": {
+		"rooms": 0,
+		"elements": 0,
+		"dashboard": 0
+	},
+	"permanently_hidden": true,
+	"probeType": "",
+	"tags": [],
+	"visibility": false,
+	"updateTime": 0
+}

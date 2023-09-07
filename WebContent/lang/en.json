@@ -1,0 +1,10 @@
+{
+	"m_title": "Wall-plug control by HTTP check of some device",
+	"m_descr": "Controls switches via http check",
+	"l_checkUrl": "URL of device for periodic check",
+	"l_successResponseContains": "Success response contains",
+	"l_checkIntervalSec": "Check interval seconds",
+	"l_switches": "Switches to control",
+	"l_useWGet": "Use system command Wget for getting xml"	
+	
+}

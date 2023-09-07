@@ -1,0 +1,94 @@
+{
+	"singleton": false,
+	"dependencies": [],
+	"category": "complex_applications",
+	"author": "Alexandr Kuznetsov",
+	"homepage": "http://power.lv",
+	"icon": "icon.png",
+	"moduleName": "WallPlugSmartControl",
+	"version": "1.0.0",
+	"maturity": "stable",
+	"repository": {
+		"type": "git",
+		"source": "https://github.com/bla-bla-bla"
+	},
+	"defaults": {
+		"title": "__m_title__",
+		"description": "__m_descr__",
+		"switches": [],
+		"checkUrl": "",
+		"successResponseContains": "",
+		"checkIntervalSec": 10,
+		"useWGet": false
+	},
+	"schema": {
+		"type": "object",
+		"properties": {
+			"checkUrl": {
+				"pattern": "^http(s)?://[a-zA-Z0-9]+",
+				"required": true
+			},
+			"successResponseContains": {
+				"pattern": ".+",
+				"required": true
+			},
+			"checkIntervalSec": {
+				"maximum": 3600,
+				"minimum": 10,
+				"required": true
+			},
+			"switches": {
+				"type": "array",
+				"items": {
+					"field": "enum",
+					"datasource": "namespaces",
+					"enum": "namespaces:devices_switchBinary:deviceId,namespaces:devices_switchMultilevel:deviceId,namespaces:devices_toggleButton:deviceId",
+					"required": true
+				}
+			},
+			"useWGet": {
+				"type": "boolean"
+			}
+		},
+		"required": false
+	},
+	"options": {
+		"fields": {
+			"checkUrl": {
+				"label": "__l_checkUrl__",
+				"helper": "Enter URL to check",
+				"type": "text",
+				"placeholder": "http://",
+				"hideInitValidationError": "true"
+			},
+			"successResponseContains": {
+				"label": "__l_successResponseContains__",
+				"helper": "Enter substring (or XPath) to check success response",
+				"type": "text",
+				"placeholder": "OK",
+				"hideInitValidationError": "true"
+			},
+			"checkIntervalSec": {
+				"label": "__l_checkIntervalSec__",
+				"type": "number",
+				"helper": "Enter check interval seconds",
+				"placeholder": 30
+			},
+			"useWGet": {
+				"label": "__l_useWGet__",				
+				"helper": "Check for WGet usage"				
+			},
+			"switches": {
+				"label": "__l_switches__",
+				"fields": {
+					"item": {
+						"label": "",
+						"datasource": "namespaces",
+						"field": "optionLabels",
+						"optionLabels": "namespaces:devices_switchBinary:deviceName,namespaces:devices_switchMultilevel:deviceName,namespaces:devicdevices_toggleButton:deviceName"
+					}
+				}
+			}
+		}
+	}
+}
