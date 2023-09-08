@@ -9,3 +9,5 @@ I wrote this module to control the power of the subwoofer depending on whether t
 Default Location: /opt/z-way-server/automation/userModules/WallPlugSmartControl
 
 Server restart: /etc/init.d/z-way-server restart
+
+To use Wget, "wget" command need to be permitted by putting one line with the starting commands in the file *automation/.syscommands*
