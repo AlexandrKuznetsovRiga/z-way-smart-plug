@@ -56,7 +56,7 @@ WallPlugSmartControl.prototype.init = function(config) {
 		try {
 			WallPlugSmartControl.debug("Call HTTP: " + self.checkUrl);
 			if (self.useWGet) {
-				var command = "wget --no-check-certificat -O - -q " + self.checkUrl;
+				var command = "wget --timeout=2 --no-check-certificat -O - -q " + self.checkUrl;
 				var result = system(command);				
 				if( result === undefined ){
 					WallPlugSmartControl.debug("Wget result: undefined");
