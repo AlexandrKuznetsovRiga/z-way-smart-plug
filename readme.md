@@ -11,3 +11,6 @@ Default Location: /opt/z-way-server/automation/userModules/WallPlugSmartControl
 Server restart: /etc/init.d/z-way-server restart
 
 To use Wget, "wget" command need to be permitted by putting one line with the starting commands in the file *automation/.syscommands*
+
+Some receiver models provide access to their REST API via the HTTPS protocol, but work with security certificates is not fully implemented. 
+And standard JavaScript requests will not work. Therefore, you will have to switch to WGet, which can ignore problems with security certificates.
